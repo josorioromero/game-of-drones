@@ -6,12 +6,12 @@ Node.js for the server side and MongoDB for the data persistence.
 ###How to run it?
 Just follow these steps
 
-* `git clone https://github.com/josorioromero/game-of-drones.git`
+* Open your terminal and run `git clone https://github.com/josorioromero/game-of-drones.git`
 * Go to the folder where you clonned the repo `cd name_of_folder`
 * Go to the API folder `cd api`
 * `npm install`
 * Start the api with `npm run dev`
-* Go to the client folder `cd client`
+* Open another terminal instance and go to the client folder `cd client`
 * `npm install` 
 * Start the site with `npm start`
 
