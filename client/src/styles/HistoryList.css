@@ -1,0 +1,14 @@
+.history-list-separator {
+  border-width: 2px;
+  border-bottom-width: 2px;
+  border-bottom-color: #000;
+  border-bottom-style: solid;
+}
+
+.history-list-label {
+  margin-right: 20px;
+}
+
+.history-list-filter-area {
+  padding-top: 20px;
+}

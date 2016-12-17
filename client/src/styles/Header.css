@@ -1,0 +1,29 @@
+.header {
+  text-align: center;
+}
+
+.header-logo {
+  animation: header-logo-spin infinite 5s linear;
+  height: 80px;
+}
+
+.app-header {
+  background-color: rgb(76, 161, 60);
+  height: 170px;
+  padding: 20px;
+  color: white;
+}
+
+.header-intro {
+  font-size: large;
+}
+
+.header-button{
+  margin-top: 20px;
+  width: 300px;
+}
+
+@keyframes header-logo-spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
