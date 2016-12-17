@@ -12,7 +12,7 @@ Just follow these steps
 * `npm install`
 * Start the api with `npm run dev`
 * Go to the client folder `cd client`
-* `npm install
+* `npm install` 
 * Start the site with `npm start`
 
 You'll be redirected to your browser `http://localhost:3000/home`
