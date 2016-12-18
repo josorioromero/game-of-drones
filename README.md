@@ -17,6 +17,8 @@ Just follow these steps
 
 You'll be redirected to your browser `http://localhost:3000/home`
 
+PS: If you want to run the tests for the `client` project, then go to the client folder and run `npm test`
+
 The client project was bootstraped using the amazing [Create React App](https://github.com/facebookincubator/create-react-app) tool.
 
 H4pp1 C0d1ng
