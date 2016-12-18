@@ -10,7 +10,11 @@ Just follow these steps
 * Go to the folder where you clonned the repo `cd name_of_folder`
 * Go to the API folder `cd api`
 * `npm install`
-* Start the api with `npm run dev`
+* Start the api with `npm run dev` wait until you see the messages
+  ```
+  Server succesfully started on port 8080
+  Succesfully connected to: mongodb://gameuser:welcome@jello.modulusmongo.net:27017/xej6yjeP
+  ```
 * Open another terminal instance and go to the client folder `cd client`
 * `npm install` 
 * Start the site with `npm start`
