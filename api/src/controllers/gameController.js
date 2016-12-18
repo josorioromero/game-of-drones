@@ -22,7 +22,7 @@ function getGameById(req, res) {
 function postGame(req, res) {
     var newGame = new Game(req.body);
 
-    newGame.save(err => {
+    newGame.save((err, game) => {
         if (err) {
             res.send(err);
         }
@@ -47,7 +47,7 @@ function updateGame(req, res) {
 function deleteGame(req, res) {
     Game.remove({
         _id: req.params.game_id
-    }, (err, user) => {
+    }, (err, result) => {
         if (err) {
             res.send(err);
         }
