@@ -15,7 +15,6 @@ const Header = () => {
       <Nav bsStyle="tabs">
           <NavItem eventKey="1" href="/">Game</NavItem>
           <NavItem eventKey="2" href="/history">History</NavItem>
-          <NavItem eventKey="3" href="/home">Rules</NavItem>
       </Nav>
     </div>
   );

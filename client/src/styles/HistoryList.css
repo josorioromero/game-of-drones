@@ -12,3 +12,25 @@
 .history-list-filter-area {
   padding-top: 20px;
 }
+
+.history-list-rounds {
+  padding-right: 50px;
+}
+
+.history-list-centered {
+  text-align: center;
+}
+
+.history-list-padding {
+  padding-top: 20px;
+}
+
+.history-list-button {
+  margin-left: 10px;
+}
+
+.history-list-accordion {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 30px;
+}
