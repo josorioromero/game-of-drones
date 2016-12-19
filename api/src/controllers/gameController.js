@@ -34,11 +34,13 @@ function updateGame(req, res) {
     Game.findById({
         _id: req.params.game_id
     }, (err, game) => {
-        if (err)
-            res.send(err);
+        if (err) {
+          res.send(err); 
+        }
         Object.assign(game, req.body).save((err, game) => {
-            if (err)
+            if (err) {
                 res.send(err);
+            }
             res.json({message: 'Game updated!'});
         });
     });
