@@ -14,6 +14,8 @@ const MovementOptions = (props) => {
             <MenuItem eventKey="rock">Rock</MenuItem>
             <MenuItem eventKey="paper">Paper</MenuItem>
             <MenuItem eventKey="scissors">Scissors</MenuItem>
+            <MenuItem eventKey="parrot">Parrot</MenuItem>
+            <MenuItem eventKey="coyote">Coyote</MenuItem>
         </DropdownButton>
       </div>
     );
