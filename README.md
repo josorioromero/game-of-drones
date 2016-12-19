@@ -37,6 +37,7 @@ PS: If you want to run the tests for the `client` project, then go to the client
 
 * Start the game by input the two players names and clicking on the **start** button.
 * Each player will select the move and will click the **OK** button, when both players have selected their movements, the **Fight**       button will appear and the computer will calculate who's the winner. The round results will appear on the right side of the screen.
+  The round can finish with a win for some player or with a draw.
 * The fight will repeat until one player wins 3 rounds. The winner will become the new emperor.
 * When the game is finished the game data is stored in the database and you can play again clicking on the **play again** button.
 * If you click the **history** menu, you'll see an historical information about all the games including the winner, loser and rounds.
