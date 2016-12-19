@@ -29,7 +29,7 @@ Just follow these steps
 * Start the api running the command `npm start`, wait until you see the messages `Server succesfully started on port 8080` and `Succesfully connected to: mongodb://gameuser:****@jello.modulusmongo.net:27017/xej6yjeP` which is the mongoDB server used in this project.
 * Open another terminal instance and go to the client folder `cd client`
 * Run the command `npm install`
-* Start the site with `npm start`. You'll be redirected to your browser `http://localhost:3000/home`
+* Start the site with `npm start`. You'll be redirected to your browser `http://localhost:3000`
 
 PS: If you want to run the tests for the `client` project, then go to the client folder and run `npm test`
 
