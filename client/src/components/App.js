@@ -25,6 +25,7 @@ export default class App extends Component {
       rounds: [],
       roundNumber: 1,
       winner: '',
+      loser: '',
       hideSplash: false,
       hideMovement: true,
       hideFightButton: true,
@@ -73,15 +74,19 @@ export default class App extends Component {
 
   checkWinner() {
     let winner = '';
+    let loser = '';
     if(this.state.rounds.filter(x => { return x.winner === this.state.player1 }).length === 3) {
       winner = this.state.player1;
+      loser = this.state.player2;
     } else if (this.state.rounds.filter(x => { return x.winner === this.state.player2 }).length === 3){
       winner = this.state.player2;
+      loser = this.state.player1;
     }
 
     if (winner) {
       this.setState({
-        winner: winner,
+        winner,
+        loser,
         hideMovement: true,
         hideFightButton: true,
         hideWin: false
@@ -98,6 +103,7 @@ export default class App extends Component {
   saveGame() {
     GameStore.post({
       winner: this.state.winner,
+      loser: this.state.loser,
       player1: this.state.player1,
       player2: this.state.player2,
       rounds: this.state.rounds
@@ -114,6 +120,7 @@ export default class App extends Component {
       rounds: this.state.rounds.concat(round),
       roundNumber: this.state.roundNumber + 1,
       winner: '',
+      loser: '',
       hideSplash: true,
       hideMovement: false,
       hideFightButton: true,
@@ -131,6 +138,11 @@ export default class App extends Component {
     if(!this.state.player1 || !this.state.player2){
       return false;
     }
+
+    if (this.state.player1 === this.state.player2) {
+      return false;
+    }
+
     return true;
   }
 
@@ -152,7 +164,7 @@ export default class App extends Component {
       <div className="App">
         <Header></Header>
         <Row>
-          <Col md={6}>
+          <Col md={6} className='App-game-area'>
             <div className={splashClassName}>
               <h1 className="splash-h1">Enter Players Names!</h1>
               <br />

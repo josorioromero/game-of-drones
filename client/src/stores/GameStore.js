@@ -9,6 +9,7 @@ export default {
     post: (state) => {
       axios.post(apiUrl, {
         winner: state.winner,
+        loser: state.loser,
         player1: state.player1,
         player2: state.player2,
         rounds: state.rounds

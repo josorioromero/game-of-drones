@@ -10,30 +10,12 @@ const HistoryList = (props) => {
     'hidden': !props.winnerFilter
   });
 
+  const defaultMessage = (
+    <div><h2>No Results</h2></div>
+  );
+
   const list = (
     <div>
-      <Row>
-        <Col md={6}>
-          <Row>
-            <Col md={6}><h2>Historic Results</h2></Col>
-            <div className={winnerClassName}>
-              <Col md={6}>
-                <h3>{`${Utilities.capitalize(props.winnerFilter)} has won ${props.gamesWon} games`}</h3>
-              </Col>
-            </div>
-          </Row>
-        </Col>
-        <Col className="history-list-filter-area" md={6}>
-          <label className="history-list-label" htmlFor="filter">Filter by Game Winner</label>
-          <input id="filter" type="text" value={props.filterValue} onChange={props.onFilterChange}/>
-          <Button bsStyle="success"
-            className="history-list-button"
-            onClick={props.onFilterClick}>Filter</Button>
-          <Button bsStyle="success"
-              className="history-list-button"
-              onClick={props.onClearClick}>Clear</Button>
-        </Col>
-      </Row>
       <span>Click on each row to see game details</span>
       <Accordion className="history-list-accordion" defaultActiveKey="0">
       {props.games.map((game, gameIndex) => {
@@ -45,12 +27,14 @@ const HistoryList = (props) => {
               <Row>
                 <Col md={6}>
                   <Row>
-                    <Col md={6}><h2>Game</h2></Col>
-                    <Col md={6}><h2>Winner</h2></Col>
+                    <Col md={3}><h2>Game</h2></Col>
+                    <Col md={3}><h2>Winner</h2></Col>
+                    <Col md={3}><h2>Loser</h2></Col>
                   </Row>
                   <Row>
-                    <Col md={6}>{gameIndex + 1}</Col>
-                    <Col md={6}>{Utilities.capitalize(game.winner)}</Col>
+                    <Col md={3}>{gameIndex + 1}</Col>
+                    <Col md={3}>{Utilities.capitalize(game.winner)}</Col>
+                    <Col md={3}>{Utilities.capitalize(game.loser)}</Col>
                   </Row>
                 </Col>
                 <Col md={6} className="history-list-rounds">
@@ -89,9 +73,33 @@ const HistoryList = (props) => {
     </div>
   );
 
+  const content = props.games.length > 0 ? list : defaultMessage;
+
   return(
     <div>
-      {list}
+      <Row>
+        <Col md={6}>
+          <Row>
+            <Col md={6}><h2>Historic Results</h2></Col>
+            <div className={winnerClassName}>
+              <Col md={6}>
+                <h3>{`${Utilities.capitalize(props.winnerFilter)} has won ${props.gamesWon} game(s)`}</h3>
+              </Col>
+            </div>
+          </Row>
+        </Col>
+        <Col className="history-list-filter-area" md={6}>
+          <label className="history-list-label" htmlFor="filter">Filter by Game Winner</label>
+          <input id="filter" type="text" value={props.filterValue} onChange={props.onFilterChange}/>
+          <Button bsStyle="success"
+            className="history-list-button"
+            onClick={props.onFilterClick}>Filter</Button>
+          <Button bsStyle="success"
+              className="history-list-button"
+              onClick={props.onClearClick}>Clear</Button>
+        </Col>
+      </Row>
+      {content}
     </div>
   );
 };

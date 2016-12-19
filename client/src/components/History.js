@@ -56,7 +56,7 @@ export default class History extends Component {
     let gamesWon = 0;
 
     filteredGames = this.state.games.filter(x => {
-      return x.winner.toUpperCase().includes(this.state.filterValue.toUpperCase());
+      return x.winner.toUpperCase() === this.state.filterValue.toUpperCase();
     });
 
     if (this.state.filterValue) {

@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+.App-game-area {
+  padding-left: 10%;
+}

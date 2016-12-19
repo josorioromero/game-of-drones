@@ -11,6 +11,7 @@ var gameSchema = new Schema({
   player1: String,
   player2: String,
   winner: String,
+  loser: String,
   rounds: [roundSchema]
 });
 

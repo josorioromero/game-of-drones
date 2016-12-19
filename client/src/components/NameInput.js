@@ -1,4 +1,6 @@
 import React from 'react';
+import { FormControl } from 'react-bootstrap';
+
 import '../styles/NameInput.css';
 
 const NameInput = (props) => {
@@ -6,11 +8,11 @@ const NameInput = (props) => {
     <div>
       <label className="name-input-label"
         htmlFor="player1-name">{props.labelValue}</label>
-      <input className="splash-input"
+      <FormControl className="splash-input"
         id="player1-name"
         type="text"
         value={props.playerName}
-        onChange={props.onInputChange}></input>
+        onChange={props.onInputChange} />
       <br /><br />
     </div>
   );
